@@ -21,6 +21,10 @@ describe("Calculator tests: ", () => {
     expect(calculator.add(100)).toBe(100);
   });
 
+  test("Sum test 6", () => {
+    expect(calculator.add(4.4, 5.5)).toBeLessThan(10);
+  });
+
   test("subtract test 1", () => {
     expect(calculator.subtract(10, 50)).toBe(-40);
   });
@@ -35,5 +39,25 @@ describe("Calculator tests: ", () => {
 
   test("subtract test 4", () => {
     expect(calculator.subtract(100)).toBe(100);
+  });
+
+  test("divide test 1", () => {
+    expect(calculator.divide(10, 2)).toBe(5);
+  });
+
+  test("divide test 2", () => {
+    expect(calculator.divide(10, -2)).toBe(-5);
+  });
+
+  test("divide test 3", () => {
+    expect(calculator.divide()).toBeFalsy();
+  });
+
+  test("divide test 4", () => {
+    expect(calculator.divide(100)).toBe(100);
+  });
+
+  test("divide test 5", () => {
+    expect(calculator.divide(100, 0)).toMatch("You cant divide by ZERO");
   });
 });
