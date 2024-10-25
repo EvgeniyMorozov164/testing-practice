@@ -60,4 +60,20 @@ describe("Calculator tests: ", () => {
   test("divide test 5", () => {
     expect(calculator.divide(100, 0)).toMatch("You cant divide by ZERO");
   });
+
+  test("multiply test 1", () => {
+    expect(calculator.multiply(20, 5)).toBe(100);
+  });
+
+  test("multiply test 2", () => {
+    expect(calculator.multiply(21, 6.64)).toBeGreaterThan(139);
+  });
+
+  test("multiply test 3", () => {
+    expect(calculator.multiply(21)).toBe(21);
+  });
+
+  test("multiply test 4", () => {
+    expect(calculator.multiply()).toBeFalsy();
+  });
 });
