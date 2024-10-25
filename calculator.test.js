@@ -20,4 +20,20 @@ describe("Calculator tests: ", () => {
   test("Sum test 5", () => {
     expect(calculator.add(100)).toBe(100);
   });
+
+  test("subtract test 1", () => {
+    expect(calculator.subtract(10, 50)).toBe(-40);
+  });
+
+  test("subtract test 2", () => {
+    expect(calculator.subtract(100, 50)).toBe(50);
+  });
+
+  test("subtract test 3", () => {
+    expect(calculator.subtract()).toBeFalsy();
+  });
+
+  test("subtract test 4", () => {
+    expect(calculator.subtract(100)).toBe(100);
+  });
 });

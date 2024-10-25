@@ -10,6 +10,18 @@ const calculator = {
 
     return a + b;
   },
+
+  subtract: function(a, b) {
+    if (!arguments) {
+      return null;
+    }
+
+    if (arguments.length === 1) {
+      return arguments[0];
+    }
+    
+    return a - b;
+  }
 };
 
 export { calculator };
